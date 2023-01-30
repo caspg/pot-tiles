@@ -3,6 +3,7 @@
 # https://stackoverflow.com/a/24112741/4490927
 parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 cd "$parent_path"
+source config.sh
 
 # Generate mbtiles using Planetiler
 #
@@ -15,7 +16,7 @@ cd "$parent_path"
 docker run -e \
   JAVA_TOOL_OPTIONS="-Xms6g -Xmx6g -XX:OnOutOfMemoryError=\"kill -9 %p\"" \
   -v "$(pwd)/tmp":/data \
-  openmaptiles/planetiler-openmaptiles:3.14.0 \
+  openmaptiles/planetiler-openmaptiles:$planetiler_version \
   --area=poland \
   --bounds="13.9, 48.76, 24.6, 55.09" \
   --download  \
