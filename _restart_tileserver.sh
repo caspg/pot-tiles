@@ -6,4 +6,4 @@ cd "$parent_path"
 source config.sh
 
 docker stop $(docker ps -q --filter ancestor=maptiler/tileserver-gl:$tileserver_version)
-bash ./run_tileserver.sh
+bash ./_run_tileserver.sh

@@ -18,7 +18,7 @@ docker run -e \
   -v "$(pwd)/tmp":/data \
   openmaptiles/planetiler-openmaptiles:$planetiler_version \
   --area=poland \
-  --bounds=europe \
+  --bounds="4.59, 45.05, 31.34, 58.19" \
   --download  \
   --nodemap-type=sparsearray \
   --nodemap-storage=mmap \

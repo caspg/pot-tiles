@@ -14,7 +14,7 @@ echo "-------------------------------------------------------------------------"
 echo "Starting generating Poland mbtiles"
 echo $(date +'%Y-%m-%d %H:%M %Z')
 echo "-------------------------------------------------------------------------"
-bash ./generate_tiles.sh
+bash ./_generate_tiles.sh
 
 echo "-------------------------------------------------------------------------"
 echo "Removing old mbtiles and moving new ones"
@@ -25,4 +25,4 @@ mv tmp/output.mbtiles data
 echo "-------------------------------------------------------------------------"
 echo "Restarting tileserver"
 echo "-------------------------------------------------------------------------"
-bash ./restart_tileserver.sh
+bash ./_restart_tileserver.sh
