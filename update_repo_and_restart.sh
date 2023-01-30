@@ -5,4 +5,4 @@ parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 cd "$parent_path"
 
 git pull
-bash ./restart_tileserver.sh
+bash ./_restart_tileserver.sh
