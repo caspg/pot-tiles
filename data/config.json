@@ -1,0 +1,21 @@
+{
+  "options": {
+    "paths": {
+      "fonts": "fonts",
+      "styles": "styles"
+    }
+  },
+  "styles": {
+    "default": {
+      "style": "default/style.json",
+      "tilejson": {
+        "type": "overlay"
+      }
+    }
+  },
+  "data": {
+    "default": {
+      "mbtiles": "output.mbtiles"
+    }
+  }
+}

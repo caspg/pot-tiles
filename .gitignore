@@ -1,0 +1,7 @@
+data/*.mbtiles
+
+logs.txt
+
+.DS_Store
+
+tmp
