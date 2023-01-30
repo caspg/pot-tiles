@@ -9,7 +9,8 @@
     "default": {
       "style": "default/style.json",
       "tilejson": {
-        "type": "overlay"
+        "type": "overlay",
+        "bounds": [13.9, 48.76, 24.6, 55.09]
       }
     }
   },
