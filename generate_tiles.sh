@@ -12,16 +12,13 @@ cd "$parent_path"
 # -Xmx10g controls how much RAM to give the JVM (recommended: 0.5x the input .osm.pbf file size to leave room for memory-mapped files)
 # --osm-parse-node-bounds=true (parse bounds from OSM nodes instead of header)
 
-# TODO(kacper): add bounds slightly bigger than just Poland.
-# It will generate "empty" tiles around Poland.
-
 docker run -e \
   JAVA_TOOL_OPTIONS="-Xms6g -Xmx6g -XX:OnOutOfMemoryError=\"kill -9 %p\"" \
   -v "$(pwd)/tmp":/data \
   openmaptiles/planetiler-openmaptiles:3.14.0 \
-  --area=pomorskie \
+  --area=poland \
+  --bounds="13.9, 48.76, 24.6, 55.09" \
   --download  \
   --nodemap-type=sparsearray \
   --nodemap-storage=mmap \
-  --osm-parse-node-bounds=true \
   --force 2>&1 | tee -a logs.txt
