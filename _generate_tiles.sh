@@ -22,4 +22,4 @@ docker run -e \
   --download  \
   --nodemap-type=sparsearray \
   --nodemap-storage=mmap \
-  --force 2>&1 | tee -a logs.txt
+  --force 2>&1

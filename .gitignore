@@ -1,6 +1,7 @@
 data/*.mbtiles
 
 logs.txt
+logs*
 
 .DS_Store
 

@@ -6,7 +6,7 @@ Skrypty służące do generowania i serwowania kafelków wektorowych. Styl jest 
 
 * System operacyjny UBUNTU 20 LTS albo wyższa (wyłącznie wersja LTS)
 
-## Instalacja i początkowa konfiguracja
+## Instalacja i konfiguracja
 
 Do geneorwania i serwowania wymagany jest `Docker` z uprawnieniami sudo oraz `Nginx`:
 
@@ -81,4 +81,24 @@ restart nginx after saving below config
 
 ```bash
 sudo systemctl restart nginx
+```
+
+## Skrpyty
+
+Ustawienie cyklicznej generacji kafli.
+
+```bash
+TODO
+```
+
+Manualne uruchomienie generowania kafli oraz serwera. Przydatne przy pierwszym uruchomieniu.
+
+```bash
+bash generate_tiles_and_restart_tileserver.sh 2>&1 | tee logs.txt &
+```
+
+Aktualizacja kodu, na przykład, po zmianie stylu.
+
+```bash
+bash update_repo_and_restart.sh
 ```
